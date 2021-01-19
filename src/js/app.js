@@ -1,7 +1,7 @@
-
+const modalButtons = document.querySelectorAll('.modal')
 
     $(document).ready(function(){
-      
+
       $('.slider').slick({
         dots: true,
         infinite: false,
@@ -34,4 +34,12 @@
           }
         ]
       });
+
+      // opan modal button
+      modalButtons.forEach(button => 
+        button.addEventListener("click", function() {
+         $(this).siblings('.expanded').css('display', 'block');
+          
+       }));
+
       });       
