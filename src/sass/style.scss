@@ -1,0 +1,166 @@
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// main styles
+body {
+    background-color:#1a1a1a;
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+body * {
+  color:  #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.flex_title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+.flex_title span {
+    background-color: #2e2e2e;
+   padding: 20px 25px;
+    text-align: center;
+}
+// slick slider
+.slider {
+    background-color: #2e2e2e;
+}
+
+.slider_holder {
+text-align: center;
+padding-top:35%;
+position: relative;
+}
+.slider p {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    }
+
+    .slick-next:before, .slick-prev:before {
+        opacity: 0 !important;
+    }
+    .slick-prev:after, .slick-next:after {
+        content: "V";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        opacity: 1;
+        line-height: 10px;
+        color: #ffffff;
+        font-size: 30px;
+    }
+    .slick-next:after {
+        transform: rotate(-90deg);
+        right: 250%;
+    }
+
+    .slick-prev:after {
+        transform: rotate(-270deg);
+        left: 250%;
+    }
+    .slick-dots li button:before {
+        font-size: 14px !important;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: #ffffff !important;
+       }
+
+       
+
+    // ipad landscape
+    @media (max-width: 1024px) {
+        body {
+            max-width: 850px;
+        }
+    }
+        // ipad portrait
+    @media (max-width: 768px) {
+        body {
+            max-width: 650px;
+        }
+    }
+      // mobile
+      @media (max-width: 767px) {
+        body {
+            max-width: 350px;
+        }
+        body .slider {
+            max-width: 280px;
+            margin: 0 auto;
+        }
+        .slider_holder {
+            padding-top: 65%;
+        }
+    }
+      // iphone 5
+      @media (max-width: 320px) {
+        body {
+            max-width: 280px;
+        }
+        body .slider {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
