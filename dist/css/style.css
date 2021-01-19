@@ -120,8 +120,7 @@ ul.slick-dots {
 
 .block {
   padding-top: 40%;
-  position: relative;
-  margin: 40px 0px; }
+  position: relative; }
 
 .heading {
   color: #ffffff; }
@@ -204,10 +203,28 @@ body .block .close_modal {
   border: 1px solid #000000; }
 
 .small_block {
-  text-align: center; }
+  text-align: center;
+  margin: 3% 0; }
 
 .small_block p {
   white-space: pre-line; }
+
+.two_modals {
+  display: flex;
+  width: 100%;
+  margin-top: 1%; }
+
+.double {
+  width: 50%; }
+
+.two_images {
+  padding-top: 80%; }
+
+.double:nth-of-type(1) {
+  margin-right: 0.5%; }
+
+.double:nth-of-type(2) {
+  margin-left: 0.5%; }
 
 @media (max-width: 1024px) {
   body {
