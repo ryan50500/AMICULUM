@@ -85,6 +85,14 @@ body * {
   position: relative;
   z-index: 0; }
 
+.slick-prev {
+  left: 33px !important;
+  z-index: 999 !important; }
+
+.slick-next {
+  right: 33px !important;
+  z-index: 999 !important; }
+
 .slider p {
   position: absolute;
   top: 50%;
@@ -279,7 +287,7 @@ body .block .close_modal {
 
 @media (max-width: 767px) {
   .main_wrapper {
-    max-width: 350px; }
+    max-width: 335px; }
   .slider_holder {
     padding-top: 65%; }
   body .portrait_padding {
