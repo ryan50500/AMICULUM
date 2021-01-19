@@ -141,15 +141,17 @@ z-index: 0;
     .block {
         padding-top: 40%;
         position: relative;
-        margin: 25px 0px;
+        margin: 40px 0px;
     }
 
+    .heading {
+        color: #ffffff;
+    }
 
     // large block styling
     .block h2 {
         font-size: 60px;
         line-height: normal;
-        color: #ffffff;
     }
     .block p {
         padding: 0 0 10px 0;
@@ -204,9 +206,9 @@ z-index: 0;
     }
 
 
-    // modal is hidden until user clicks button on image, removing display none
+    // modal is hidden until user clicks button on image, which removes 'display: none'
     .open_modal {
-        /* display: none; */
+        display: none;
         position: fixed;
         background-color: #ffffff;
         width: 70%;
@@ -228,6 +230,21 @@ z-index: 0;
        
     .block .modal_content p {
         padding-top: 5%;
+    }
+
+    // close modal button
+    body .block .close_modal {
+        color: #000000;
+        border: 1px solid #000000;
+    }
+
+
+    // small block styling
+    .small_block {
+        text-align: center;
+    }
+    .small_block p {
+        white-space: pre-line;
     }
 
     // ipad landscape

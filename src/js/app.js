@@ -1,4 +1,8 @@
+// open modal buttons
 const modalButtons = document.querySelectorAll('.modal')
+
+// close modal button
+const closeModal = document.querySelectorAll('.close_modal')
 
     $(document).ready(function(){
 
@@ -38,8 +42,16 @@ const modalButtons = document.querySelectorAll('.modal')
       // opan modal button
       modalButtons.forEach(button => 
         button.addEventListener("click", function() {
-         $(this).siblings('.expanded').css('display', 'block');
-          
+          console.log('this');
+         $(this).siblings('.open_modal').css('display', 'block');
+       }));
+
+
+        // close modal button
+        closeModal.forEach(button => 
+        button.addEventListener("click", function() {
+          console.log('this');
+         $(this).closest('.open_modal').css('display', 'none');
        }));
 
       });       
