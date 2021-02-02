@@ -43,15 +43,18 @@ const closeModal = document.querySelectorAll('.close_modal')
       modalButtons.forEach(button => 
         button.addEventListener("click", function() {
           console.log('this');
-         $(this).siblings('.open_modal').css('display', 'block');
+         $(this).siblings('.open_modal').fadeIn(300);
+         $('.overlay').addClass('gray');
        }));
 
 
         // close modal button
         closeModal.forEach(button => 
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function(e) {
           console.log('this');
-         $(this).closest('.open_modal').css('display', 'none');
+         $(this).closest('.open_modal').fadeOut(300);
+         e.stopPropagation();
+         $('.overlay').removeClass('gray');
        }));
 
-      });       
+      });  
