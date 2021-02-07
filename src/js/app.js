@@ -39,12 +39,33 @@ const closeModal = document.querySelectorAll('.close_modal')
         ]
       });
 
+  // On before slide change
+  $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    // 'nextSlide' indicates on which slide you want to make a change, 
+    // in this case the third slide because we start from 0
+    if (nextSlide === 2) {
+        console.log('should be blue');
+        // jquery doesn't allow stying pseudo elements,
+        // so we add class of 'blue'
+        $('button.slick-next').addClass('blue');
+    } else {
+      $('button.slick-next').removeClass('blue');
+    }
+    console.log(event);
+    console.log(nextSlide);
+    console.log(slick);
+    console.log(currentSlide);
+});
+
+
       // opan modal button
       modalButtons.forEach(button => 
         button.addEventListener("click", function() {
           console.log('this');
          $(this).siblings('.open_modal').fadeIn(300);
          $('.overlay').addClass('gray');
+        //  stops page scrolling when modal open
+         $('body').css('overflow', 'hidden');
        }));
 
 
@@ -55,6 +76,8 @@ const closeModal = document.querySelectorAll('.close_modal')
          $(this).closest('.open_modal').fadeOut(300);
          e.stopPropagation();
          $('.overlay').removeClass('gray');
+         //  enables page scrolling when modal closes
+         $('body').css('overflow', 'auto');
        }));
 
       });  

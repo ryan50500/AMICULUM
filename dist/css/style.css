@@ -321,3 +321,6 @@ body .block .close_modal {
   opacity: 0.8;
   background-color: #1a1a1a;
   z-index: 999; }
+
+button.slick-next.blue:after {
+  color: blue !important; }

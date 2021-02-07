@@ -354,3 +354,9 @@ body .block .close_modal {
     background-color: #1a1a1a;
 	z-index: 999;
 }
+
+// slick jquery on third slide change... we can't directly change pseudo elements in Jquery CSS
+// 'blue' is the class we are adding to  'slick-next:after'
+button.slick-next.blue:after {
+	color: blue !important;
+}
