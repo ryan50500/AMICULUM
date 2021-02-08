@@ -329,7 +329,7 @@ button.slick-prev.blue:after {
   color: blue !important; }
 
 .slick-prev:before {
-  background-image: url("/dist/images/back.png") !important;
+  background-image: url("/dist/images/back.PNG") !important;
   background-size: cover;
   color: transparent !important;
   height: 20px;
