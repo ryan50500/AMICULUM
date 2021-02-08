@@ -365,6 +365,10 @@ button.slick-prev.blue:after {
 
 // custom arrow image example
 .slick-prev:before {
+	// local arrow image
+	// background-image: url('/src/images/back.png') !important;
+	
+	// URl needed to host arrow on github
 	background-image: url('https://ryan50500.github.io/AMICULUM/src/images/back.png') !important;
 	background-size: cover;
 	color: transparent !important;
