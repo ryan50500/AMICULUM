@@ -98,14 +98,13 @@ body .slick-next {
 	font-size: 48px;
 }
 .slick-next:after {
-	// transform: rotate(-180deg);
 	content: '\f105';
 }
 .slick-prev:after {
 	content: '\f104';
-    // transform: rotate(-360deg);
 	right: 22px;
 }
+
 ul.slick-dots {
 	position: relative;
 	bottom: 16px;
@@ -359,4 +358,17 @@ body .block .close_modal {
 // 'blue' is the class we are adding to  'slick-next:after'
 button.slick-next.blue:after {
 	color: blue !important;
+}
+button.slick-prev.blue:after {
+	color: blue !important;
+}
+
+// custom arrow image example
+.slick-prev:before {
+	background-image: url('/dist/images/back.png') !important;
+	background-size: cover;
+	color: transparent !important;
+	height: 20px;
+	width: 20px;
+	opacity: 1 !important;
 }

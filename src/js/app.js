@@ -41,15 +41,19 @@ const closeModal = document.querySelectorAll('.close_modal')
 
   // On before slide change
   $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    // 'nextSlide' indicates on which slide you want to make a change, 
-    // in this case the third slide because we start from 0
-    if (nextSlide === 2) {
+    // 'nextSlide' indicates on which slide you want to make a change.. 
+    // ie. nextSlide = 2 is third slide because we start from 0
+
+    // alternate slides
+    if (nextSlide === 1 || nextSlide === 3 || nextSlide === 5) {
         console.log('should be blue');
         // jquery doesn't allow stying pseudo elements,
         // so we add class of 'blue'
         $('button.slick-next').addClass('blue');
+        $('button.slick-prev').addClass('blue');
     } else {
       $('button.slick-next').removeClass('blue');
+      $('button.slick-prev').removeClass('blue');
     }
     console.log(event);
     console.log(nextSlide);

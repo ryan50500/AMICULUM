@@ -324,3 +324,14 @@ body .block .close_modal {
 
 button.slick-next.blue:after {
   color: blue !important; }
+
+button.slick-prev.blue:after {
+  color: blue !important; }
+
+.slick-prev:before {
+  background-image: url("/dist/images/back.png") !important;
+  background-size: cover;
+  color: transparent !important;
+  height: 20px;
+  width: 20px;
+  opacity: 1 !important; }
