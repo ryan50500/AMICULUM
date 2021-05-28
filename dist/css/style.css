@@ -56,9 +56,6 @@ body * {
 .slider {
   background-color: #2e2e2e; }
 
-.slider:hover {
-  background-color: blue; }
-
 .slick-dotted.slick-slider {
   margin-bottom: 0 !important; }
 

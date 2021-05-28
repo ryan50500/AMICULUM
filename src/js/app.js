@@ -89,3 +89,13 @@ const closeModal = document.querySelectorAll('.close_modal')
        }));
 
       });  
+
+
+      function isTouched() {
+        document.getElementById("main_slide").style.backgroundColor = "blue";
+      }
+
+      function removeTouch() {
+        document.getElementById("main_slide").style.backgroundColor = "red";
+      }
+      
