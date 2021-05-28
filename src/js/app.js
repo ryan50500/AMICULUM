@@ -45,19 +45,24 @@ const closeModal = document.querySelectorAll('.close_modal')
     // ie. nextSlide = 2 is third slide because we start from 0
 
     // alternate slides
-    if (nextSlide === 1 || nextSlide === 3 || nextSlide === 5) {
+    if (nextSlide === 1 || 3 || 5) {
         console.log('should be blue');
         // jquery doesn't allow stying pseudo elements,
         // so we add class of 'blue'
+        $('button.slick-next').removeClass('green');
+        $('button.slick-prev').removeClass('green');
         $('button.slick-next').addClass('blue');
         $('button.slick-prev').addClass('blue');
-    } else {
+    } 
+    else {
       $('button.slick-next').removeClass('blue');
       $('button.slick-prev').removeClass('blue');
+      $('button.slick-next').addClass('green');
+      $('button.slick-prev').addClass('green');
     }
-    console.log(event);
+    // console.log(event);
     console.log(nextSlide);
-    console.log(slick);
+    // console.log(slick);
     console.log(currentSlide);
 });
 
@@ -71,7 +76,6 @@ const closeModal = document.querySelectorAll('.close_modal')
         //  stops page scrolling when modal open
          $('body').css('overflow', 'hidden');
        }));
-
 
         // close modal button
         closeModal.forEach(button => 

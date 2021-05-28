@@ -1,5 +1,4 @@
 /* CSS RESET */
-
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -59,6 +58,9 @@ body * {
 // slick slider
 .slider {
 	background-color: #2e2e2e;
+}
+.slider:hover {
+	background-color: blue;
 }
 .slick-dotted.slick-slider {
 	margin-bottom: 0 !important;
@@ -361,6 +363,13 @@ button.slick-next.blue:after {
 }
 button.slick-prev.blue:after {
 	color: blue !important;
+}
+
+button.slick-next.green:after {
+	color: green !important;
+}
+button.slick-prev.green:after {
+	color: green !important;
 }
 
 // custom arrow image example
