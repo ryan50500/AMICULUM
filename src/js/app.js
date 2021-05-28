@@ -92,10 +92,10 @@ const closeModal = document.querySelectorAll('.close_modal')
 
 
       function isTouched() {
-        document.getElementById("main_slide").style.backgroundColor = "blue";
+        document.getElementById("main_slide").classList.add('fading')
       }
 
       function removeTouch() {
-        document.getElementById("main_slide").style.backgroundColor = "red";
+        document.getElementById("main_slide").classList.remove('fading')
       }
       

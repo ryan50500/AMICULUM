@@ -60,6 +60,11 @@ body * {
 	background-color: #2e2e2e;
 }
 
+.fading {
+	background-color:blue !important;
+	transition: 2s all ease;
+}
+
 .slick-dotted.slick-slider {
 	margin-bottom: 0 !important;
 }
