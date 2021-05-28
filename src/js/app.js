@@ -91,11 +91,21 @@ const closeModal = document.querySelectorAll('.close_modal')
       });  
 
 
-      function isTouched() {
-        document.getElementById("main_slide").classList.add('fading')
-      }
+      // function isTouched() {
+      //   document.getElementById("main_slide").classList.add('fading')
+      // }
 
-      function removeTouch() {
-        document.getElementById("main_slide").classList.remove('fading')
-      }
+      // function removeTouch() {
+      //   document.getElementById("main_slide").classList.remove('fading')
+      // }
       
+
+
+      $('html').click(function() {
+        document.getElementById("main_slide").classList.remove('fading')
+        });
+       
+        $('#main_slide').click(function(event){
+            event.stopPropagation();
+            document.getElementById("main_slide").classList.add('fading')
+        });
