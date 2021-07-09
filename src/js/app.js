@@ -67,15 +67,16 @@ const closeModal = document.querySelectorAll('.close_modal')
 });
 
 
-      // opan modal button
-      modalButtons.forEach(button => 
-        button.addEventListener("click", function() {
+      // open modal (works in Internet exploer)
+      for (i=0; i < modalButtons.length; i++) {
+        modalButtons[i].addEventListener("click", function() {
           console.log('this');
-         $(this).siblings('.open_modal').fadeIn(300);
-         $('.overlay').addClass('gray');
+         this.previousElementSibling.style.display = "block";
+        //  $('.overlay').addClass('gray');
         //  stops page scrolling when modal open
-         $('body').css('overflow', 'hidden');
-       }));
+        //  $('body').css('overflow', 'hidden');
+       });
+      };
 
         // close modal button
         closeModal.forEach(button => 
